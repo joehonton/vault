@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[vaultresources.dsp]
+SCC_Aux_Path = "C:\SourceSafe"
+SCC_Project_Name = "$/Vault/vdbResources", XQDAAAAA
+
+[vaultresources.dsw]
+SCC_Aux_Path = "C:\SourceSafe"
+SCC_Project_Name = "$/Vault/vdbResources", XQDAAAAA

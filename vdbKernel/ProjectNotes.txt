@@ -1,0 +1,63 @@
+Project notes for Vault and VaultDLL
+
+Note 1:
+The #define USE_WIN includes <windows.h>
+The #define USE_AFX includes <afx.h>
+
+This library and DLL will compile and link with either setting, but any
+application that uses MFC should build this library and DLL using USE_AFX
+so that the MFC memory manager operator new and operator delete don't fail.
+
+Note 2:
+The USE_PRE_HDR must be defined to build the library but does not need to
+be defined in the applications which use the library.
+
+
+Note 3:
+Other #defines implicitly set by the compiler unless "undefine all" is set:
+_MSC_VER = 900
+_M_ALPHA on the Alpha
+_M_IX86  on Intel
+
+Other #defines explicitly set:
+_ALPHA_ for the Alpha
+WIN32 for MYEXPORT
+
+
+Note 4:
+When building the dll define _WINDLL and _USRDLL so that the memory manager
+cleans up properly when the dll is shut down.
+
+Note 5:
+These problems have started to appear after I created the VaultDLL.  It appears
+that accessing MFC from a DLL requires special treatment.  This cascades to all
+libraries and apps having to set the switch to use MFC as a DLL.
+
+Note 6:
+Setting the general compile options to "Use MFC in a DLL" triggers the define of
+_AFXDLL.  This requires the use of _DLL and _MT which are implicitly defined, but
+which I override when setting "undefine all".
+
+Note 7:
+When _DLL and _MT are explictly defined and the general setting is "Not using MFC",
+the symbols "ostream << long" and "__imp_strncat" were undefined when linking InitDB.
+
+Note 8:
+The _MT define is for multithreading.  This is required.  The problem first manifested itself
+during the constructor to vdbQuery<vdbVersion> as it instantiates _osSelect and _osSort.
+The solution is to go back to "Undefine all symbols" unchecked.
+(This works with or without:
+ 	AfxEnableMemoryTracking( FALSE );
+ 	afxMemDF = 0;
+)
+
+Note 9:
+Compiler errors on Intel machines from winnt.h
+	PCONTEXT : missing decl-specifier
+	ContextRecord : missing decl-specifier
+    Caused by including windef.h or windows.h when compiling with MFC
+	Solution is to include vdbWindows.h and define USE_AFX
+
+Note 10:
+Define USE_PRE_HDR when the file vdbHeader.cpp is designated as the precompiled header.
+This is the case when building vault.lib and DiceDB.lib

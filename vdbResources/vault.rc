@@ -1,0 +1,811 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.rc""  \t// Standard components\r\n"
+    "#include ""..\\..\\CrescentBloom\\Apps\\Version\\CBVersion.rc""  // Crescent Bloom Version\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_USER_INPUT DIALOG DISCARDABLE  0, 0, 279, 83
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_MESSAGE,7,7,264,18
+    EDITTEXT        IDC_USER_INPUT,5,30,264,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,59,60,50,14
+    PUSHBUTTON      "Extra",IDC_EXTRA,114,60,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,169,60,50,14
+END
+
+IDD_LIST_DATASOURCES DIALOG DISCARDABLE  0, 0, 271, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Open Database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Select which database to open:",IDC_STATIC,9,7,135,11
+    LISTBOX         IDC_VDB_LIST_SOURCES,9,23,252,83,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Open database",IDOK,10,107,84,14
+    PUSHBUTTON      "&Create new database...",IDC_VDB_NEW_DATABASE,94,107,84,
+                    14
+    PUSHBUTTON      "Cancel",IDCANCEL,178,107,84,14
+END
+
+IDD_DIRECTORY_DIALOG DIALOG DISCARDABLE  0, 0, 244, 271
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Directory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Current Directory:",IDC_STATIC,8,4,228,9
+    LTEXT           "",IDC_VDB_SELECTED_DIRECTORY,8,16,228,16,SS_NOPREFIX
+    CONTROL         "Tree1",IDC_VDB_DIRECTORY_TREE,"SysTreeView32",
+                    TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,8,35,228,157
+    PUSHBUTTON      "",IDC_VDB_CREATE_DIRECTORY,8,195,14,14,BS_BITMAP
+    EDITTEXT        IDC_VDB_NEW_DIRECTORY_NAME,25,195,174,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "",IDC_VDB_ACCEPT,204,195,14,14,BS_BITMAP
+    PUSHBUTTON      "",IDC_VDB_REJECT,222,195,14,14,BS_BITMAP
+    CONTROL         "Tree1",IDC_VDB_DRIVES,"SysTreeView32",TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,8,213,168,55
+    DEFPUSHBUTTON   "OK",IDOK,186,227,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,186,244,50,14
+END
+
+IDD_FILE_DIALOG DIALOG DISCARDABLE  0, 0, 356, 271
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Select file:",IDC_VDB_DESCRIPTION,5,4,168,9
+    LTEXT           "",IDC_VDB_SELECTED_DIRECTORY,5,19,168,18,SS_NOPREFIX
+    CONTROL         "Tree1",IDC_VDB_DIRECTORY_TREE,"SysTreeView32",
+                    TVS_HASLINES | TVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,5,39,168,152
+    LTEXT           "Dri&ves:",IDC_STATIC,5,194,36,9
+    CONTROL         "Tree1",IDC_VDB_DRIVES,"SysTreeView32",TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,5,207,168,54
+    LTEXT           "Selected file:",IDC_STATIC,183,4,166,8
+    EDITTEXT        IDC_VDB_SELECTED_FILE,182,18,168,14,ES_AUTOHSCROLL
+    CONTROL         "List2",IDC_VDB_FILES,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,182,39,168,152
+    LTEXT           "Files of &type:",IDC_STATIC,182,194,40,8
+    LISTBOX         IDC_VDB_FILE_TYPES,182,207,168,40,LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,214,253,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,275,253,50,14
+END
+
+IDD_PRINT_DIALOG DIALOG DISCARDABLE  0, 0, 266, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Print"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "P&rinters:",IDC_STATIC,7,5,26,8
+    COMBOBOX        IDC_VDB_PRINTERS,10,15,194,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Orientation ",IDC_STATIC,10,32,194,56
+    CONTROL         "P&ortrait",IDC_VDB_PORTRAIT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,21,49,38,10
+    CONTROL         "&Landscape",IDC_VDB_LANDSCAPE,"Button",
+                    BS_AUTORADIOBUTTON,21,65,51,10
+    GROUPBOX        "Print range ",IDC_STATIC,10,90,194,56,WS_GROUP
+    CONTROL         "&All",IDC_VDB_ALL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,21,106,23,10
+    CONTROL         "&From",IDC_VDB_PAGES,"Button",BS_AUTORADIOBUTTON,21,124,
+                    31,10
+    EDITTEXT        IDC_VDB_FROM_PAGE,61,122,40,14,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "to",IDC_STATIC,109,124,8,8
+    EDITTEXT        IDC_VDB_TO_PAGE,129,122,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Properties",IDC_VDB_SETUP,210,14,50,14
+    DEFPUSHBUTTON   "&Print",IDOK,210,94,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,111,50,14
+END
+
+IDD_EXPORT_DATA DIALOG DISCARDABLE  0, 0, 400, 245
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Select which report definition to use as the export criteria ",
+                    IDC_STATIC,6,10,289,161
+    LISTBOX         IDC_VDB_LIST,14,25,272,137,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    GROUPBOX        "Export location ",IDC_STATIC,6,178,289,61
+    LTEXT           "Directory",IDC_STATIC,39,195,29,8
+    EDITTEXT        IDC_VDB_EXPORT_DIRECTORY,79,193,187,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VDB_DIRECTORY,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    269,193,16,15
+    LTEXT           "Filename",IDC_STATIC,39,217,29,8
+    EDITTEXT        IDC_VDB_EXPORT_FILENAME,79,215,187,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Export",IDC_VDB_EXPORT,309,34,68,14
+    PUSHBUTTON      "Close",IDCANCEL,309,60,68,14
+END
+
+IDD_VDB_PRINT_REPORT DIALOG DISCARDABLE  0, 0, 345, 303
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Print report"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Printers:",IDC_STATIC,7,15,26,8
+    COMBOBOX        IDC_VDB_PRINTERS,45,11,152,91,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "P&roperties",IDC_VDB_SETUP,200,11,51,14
+    GROUPBOX        "Select which report definition to use ",IDC_STATIC,6,30,
+                    245,168
+    LISTBOX         IDC_VDB_LIST_DEFS,14,45,229,145,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    GROUPBOX        "Select which report style to use",IDC_STATIC,6,203,245,
+                    90
+    LISTBOX         IDC_VDB_LIST_STYLES,14,216,229,54,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Format &style...",IDC_VDB_FORMAT_STYLE,80,274,70,14,
+                    WS_GROUP
+    GROUPBOX        "Orientation ",IDC_STATIC,258,30,81,56
+    CONTROL         "P&ortrait",IDC_VDB_PORTRAIT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,269,48,59,10
+    CONTROL         "&Landscape",IDC_VDB_LANDSCAPE,"Button",
+                    BS_AUTORADIOBUTTON,269,64,59,10
+    GROUPBOX        "Print range ",IDC_STATIC,258,94,81,73,WS_GROUP
+    CONTROL         "&All",IDC_VDB_ALL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,261,110,23,10
+    CONTROL         "&From",IDC_VDB_PAGES,"Button",BS_AUTORADIOBUTTON,261,
+                    128,31,10
+    EDITTEXT        IDC_VDB_FROM_PAGE,299,126,34,14,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    LTEXT           "to",IDC_STATIC,281,149,8,8
+    EDITTEXT        IDC_VDB_TO_PAGE,299,146,34,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Print",IDC_VDB_PRINT,262,177,68,14
+END
+
+IDD_REPORT_BUILDER1 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - specify record type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Choose from this list which database table to use for this report",
+                    IDC_STATIC,19,9,138,16
+    LISTBOX         IDC_VDB_TABLES,8,29,163,177,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         804,IDC_STATIC,"Static",SS_BITMAP,235,31,98,61
+END
+
+IDD_REPORT_BUILDER2 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - specify columns"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Which attributes do you want to include in the report?",
+                    IDC_STATIC,11,7,194,11
+    CONTROL         "List1",IDC_VDB_COLUMNS,"SysListView32",LVS_REPORT | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,8,22,351,181
+    PUSHBUTTON      "&Include attribute(s)",IDC_VDB_INCLUDE,8,204,100,14
+    PUSHBUTTON      "&Exclude attribute(s)",IDC_VDB_EXCLUDE,108,204,100,14
+    PUSHBUTTON      "&Change column name and width",IDC_VDB_CHANGE,208,204,
+                    151,14
+END
+
+IDD_REPORT_BUILDER3 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - filter records"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Do you want to apply a filter to the records?",
+                    IDC_STATIC,26,26,138,8
+    CONTROL         "Yes, please",IDC_VDB_YES_PLEASE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,26,71,53,10
+    CONTROL         "No, thank you",IDC_VDB_NO_THANK_YOU,"Button",
+                    BS_AUTORADIOBUTTON,26,106,61,10
+    LTEXT           "A filter will reduce the total number of records shown on the report by including only records that meet your criteria.",
+                    IDC_STATIC,102,71,133,31,NOT WS_GROUP
+    LTEXT           "Without filters, all records will be shown on the report.",
+                    IDC_STATIC,102,106,127,20,NOT WS_GROUP
+    CONTROL         802,IDC_STATIC,"Static",SS_BITMAP,262,26,99,56
+END
+
+IDD_REPORT_BUILDER4 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - specify filter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Which attribute do you want to use to filter the records",
+                    IDC_STATIC,31,7,106,17
+    LISTBOX         IDC_VDB_COLUMNS,8,30,163,186,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    CTEXT           "How should the attribute be compared",IDC_STATIC,167,7,
+                    71,18
+    LISTBOX         IDC_VDB_OPERATOR,177,30,48,68,LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "What should the attribute be compared to",IDC_STATIC,
+                    259,7,87,18
+    LISTBOX         IDC_VDB_FOREIGN_LIST,233,30,163,186,LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_VDB_COMPARISON_VALUE,234,30,163,14,ES_AUTOHSCROLL
+END
+
+IDD_REPORT_BUILDER5 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - defined filters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Here is a list of the filters defined for this report",
+                    IDC_STATIC,10,9,155,16
+    LISTBOX         IDC_VDB_FILTERS,8,29,200,71,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "AND / OR",IDC_VDB_AND_OR,8,100,100,14
+    PUSHBUTTON      "Remove filter",IDC_VDB_REMOVE,108,100,100,14
+    GROUPBOX        "",IDC_STATIC,44,132,138,69
+    LTEXT           "Do you want to add another filter?",IDC_STATIC,52,139,
+                    108,8
+    CONTROL         "Yes, please",IDC_VDB_YES_PLEASE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,69,160,53,10
+    CONTROL         "No, thank you",IDC_VDB_NO_THANK_YOU,"Button",
+                    BS_AUTORADIOBUTTON,69,179,61,10
+END
+
+IDD_REPORT_BUILDER6 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - sort records"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Do you want to sort the records?",IDC_STATIC,27,26,104,
+                    8
+    CONTROL         "Yes, please",IDC_VDB_YES_PLEASE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,26,71,53,10
+    CONTROL         "No, thank you",IDC_VDB_NO_THANK_YOU,"Button",
+                    BS_AUTORADIOBUTTON,26,95,61,10
+    LTEXT           "One or more sorting criteria may be defined.",
+                    IDC_STATIC,102,71,141,19,NOT WS_GROUP
+    LTEXT           "Without sorting, all records will be displayed in their creation order.",
+                    IDC_STATIC,102,95,137,8,NOT WS_GROUP
+    CONTROL         803,IDC_STATIC,"Static",SS_BITMAP,262,26,99,56
+END
+
+IDD_REPORT_BUILDER7 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - specify sort"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Which attribute do you want to use to sort the records",
+                    IDC_STATIC,31,7,106,17
+    LISTBOX         IDC_VDB_COLUMNS,8,30,163,183,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Ascending order (from A to Z)",IDC_VDB_ASCENDING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,214,43,108,10
+    CONTROL         "Descending order (from Z to A)",IDC_VDB_DESCENDING,
+                    "Button",BS_AUTORADIOBUTTON,214,63,113,10
+END
+
+IDD_REPORT_BUILDER8 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - defined sorts"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Here is a list of the sorts defined for this report",
+                    IDC_STATIC,10,9,158,16
+    LISTBOX         IDC_VDB_SORTS,8,29,200,71,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Remove sort",IDC_VDB_REMOVE,108,100,100,14
+    GROUPBOX        "",IDC_STATIC,44,132,138,69
+    LTEXT           "Do you want to add another sort?",IDC_STATIC,52,139,106,
+                    8
+    CONTROL         "Yes, please",IDC_VDB_YES_PLEASE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,69,160,53,10
+    CONTROL         "No, thank you",IDC_VDB_NO_THANK_YOU,"Button",
+                    BS_AUTORADIOBUTTON,69,179,61,10
+END
+
+IDD_REPORT_BUILDER9 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - headers and footers"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "What header do you want to display at the top of each page?",
+                    IDC_STATIC,16,11,194,8
+    EDITTEXT        IDC_VDB_HEADER,16,26,232,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_VDB_HEADER_COMMANDS,249,26,14,14
+    LTEXT           "What footer do you want at the bottom of each page?",
+                    IDC_STATIC,16,48,170,8
+    EDITTEXT        IDC_VDB_FOOTER,16,61,232,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_VDB_FOOTER_COMMANDS,249,61,14,14
+    LTEXT           "What text do you want along the left side of each page?",
+                    IDC_STATIC,16,101,178,8
+    EDITTEXT        IDC_VDB_LEFT_MARGIN,16,114,232,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_VDB_LEFT_MARGIN_COMMANDS,249,114,14,14
+    LTEXT           "What text do you want along the right side of each page?",
+                    IDC_STATIC,16,139,182,8
+    EDITTEXT        IDC_VDB_RIGHT_MARGIN,16,152,232,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+",IDC_VDB_RIGHT_MARGIN_COMMANDS,249,152,14,14
+END
+
+IDD_REPORT_CHANGE_COLUMN DIALOG DISCARDABLE  0, 0, 241, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Column"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Column name",IDC_STATIC,9,12,44,8
+    EDITTEXT        IDC_VDB_DISPLAY_NAME,77,10,158,14,ES_AUTOHSCROLL
+    LTEXT           "Column width",IDC_STATIC,9,38,43,8
+    EDITTEXT        IDC_VDB_DISPLAY_WIDTH,77,35,40,14,ES_AUTOHSCROLL
+    LTEXT           "Format string",IDC_STATIC,9,66,41,8
+    EDITTEXT        IDC_VDB_FORMAT_STRING,77,63,99,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,50,97,60,14
+    PUSHBUTTON      "Cancel",IDCANCEL,121,97,60,14
+END
+
+IDD_REPORT_MANAGER DIALOG DISCARDABLE  0, 0, 400, 245
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Currently defined reports",IDC_STATIC,6,10,289,230
+    LISTBOX         IDC_VDB_LIST,14,25,272,191,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_VDB_NEW,14,217,68,14
+    PUSHBUTTON      "Duplicate",IDC_VDB_DUPLICATE,82,217,68,14
+    PUSHBUTTON      "Delete",IDC_VDB_DELETE,218,217,68,14
+    PUSHBUTTON      "Modify",IDC_VDB_MODIFY,150,217,68,14
+    PUSHBUTTON      "Preview",IDC_VDB_PREVIEW,309,34,68,14
+    PUSHBUTTON      "Close",IDCANCEL,309,60,68,14
+END
+
+IDD_REPORT_PREVIEW DIALOG DISCARDABLE  0, 0, 374, 296
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_VDB_EDIT,0,0,373,295,ES_MULTILINE | WS_VSCROLL | 
+                    WS_HSCROLL
+END
+
+IDD_LIST_CTRL_COLORS DIALOG DISCARDABLE  0, 0, 255, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change List Colors"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "You can customize the appearance of the lists to have bands of alternating colors.  This makes it easier for you to read.",
+                    IDC_STATIC,5,13,155,38
+    LTEXT           "Sample list",IDC_STATIC,7,54,44,8
+    CONTROL         "List1",IDC_VDB_SAMPLE_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_OWNERDRAWFIXED | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,5,65,155,60
+    LTEXT           "Highlight color",IDC_STATIC,170,64,65,8
+    COMBOBOX        IDC_VDB_HIGHLIGHT,170,74,65,103,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Background color",IDC_STATIC,170,99,65,8
+    COMBOBOX        IDC_VDB_BACKGROUND,170,109,65,88,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,195,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,195,22,50,14
+END
+
+IDD_REPORT_FORMAT_STYLE DIALOG DISCARDABLE  0, 0, 376, 246
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Format Report Style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_VDB_SAMPLE,"Static",SS_ETCHEDFRAME | SS_SUNKEN,6,
+                    6,361,59
+    LTEXT           "Choose which category to format:",IDC_VDB_CATEGORY_DESC,
+                    6,78,106,8
+    LISTBOX         IDC_VDB_CATEGORY,6,89,115,39,LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Printer fonts:",IDC_VDB_FONT_FACE_DESC,131,76,40,8
+    LISTBOX         IDC_VDB_FONT_FACE,129,88,115,152,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Style:",IDC_VDB_FONT_STYLE_DESC,253,76,18,8
+    LISTBOX         IDC_VDB_FONT_STYLE,254,88,51,40,LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Size:",IDC_VDB_FONT_SIZE_DESC,256,136,16,8
+    LISTBOX         IDC_VDB_FONT_SIZE,254,147,51,93,LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Color:",IDC_VDB_FONT_COLOR_DESC,319,76,19,8
+    LISTBOX         IDC_VDB_FONT_COLOR,315,88,51,152,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,40,226,50,14
+END
+
+IDD_TROUBLESHOOT_LOGIN DIALOG DISCARDABLE  0, 0, 339, 286
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Unable to open database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Troubleshooting Step 1 ",IDC_STATIC,5,38,329,42
+    LTEXT           "Have you selected a valid Data Source for this application?",
+                    IDC_STATIC,16,58,188,8
+    COMBOBOX        IDC_VDB_DATASOURCE,217,56,112,126,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Troubleshooting Step 2 ",IDC_STATIC,5,85,329,74
+    LTEXT           "Are the authentication ID and Password correct?",
+                    IDC_STATIC,17,107,154,8
+    LTEXT           "Authentication ID:",IDC_STATIC,217,93,61,8
+    EDITTEXT        IDC_VDB_IDENTIFICATION,226,106,103,13,ES_AUTOHSCROLL
+    LTEXT           "Authentication Password:",IDC_STATIC,217,127,83,8
+    EDITTEXT        IDC_VDB_PASSWORD,226,140,103,13,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Troubleshooting Step 3 ",IDC_STATIC,5,164,329,42
+    LTEXT           "Is the SQL Server Desktop Engine service running?",
+                    IDC_STATIC,15,184,164,8
+    PUSHBUTTON      "&SQL Server Manager...",IDC_VDB_SQL_SERVER_MANAGER,247,
+                    180,82,14
+    GROUPBOX        "Troubleshooting Step 4 ",IDC_STATIC,5,212,329,42
+    LTEXT           "Does the ODBC entry for the Data Source test OK?",
+                    IDC_STATIC,15,232,162,8
+    PUSHBUTTON      "&ODBC Manager...",IDC_VDB_ODBC_MANAGER,247,228,82,14
+    DEFPUSHBUTTON   "&Try again",IDOK,104,267,55,14
+    PUSHBUTTON      "Cancel",IDCANCEL,172,267,55,14
+    LTEXT           "The attempt to open the database has failed.\nFollow these troubleshooting steps, one at a time, and try again.",
+                    IDC_STATIC,62,7,221,24
+    CONTROL         814,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,212,
+                    224,20,20
+    CONTROL         813,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,15,
+                    9,20,20
+    CONTROL         810,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,209,
+                    178,21,18
+END
+
+IDD_DATABASE_DELETE DIALOG DISCARDABLE  0, 0, 301, 145
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete Data Source"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Data Source Name:",IDC_STATIC,9,14,67,10
+    EDITTEXT        IDC_VDB_DATASOURCE_NAME,83,11,204,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    RTEXT           "Database Name:",IDC_STATIC,17,41,59,10
+    EDITTEXT        IDC_VDB_DATABASE_NAME,83,39,204,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Deleting this database is permanent.  You cannot recover this database from the Recycle Bin.\n\nAre you sure you want to do this?",
+                    IDC_STATIC,40,68,233,37
+    DEFPUSHBUTTON   "&Yes",IDOK,97,118,50,14
+    PUSHBUTTON      "&No",IDCANCEL,154,118,50,14
+END
+
+IDD_DATABASE_NEW DIALOG DISCARDABLE  0, 0, 301, 266
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Data source ",IDC_STATIC,5,3,289,123
+    LTEXT           "Data &source name:",IDC_STATIC,11,18,71,8
+    EDITTEXT        IDC_VDB_DATASOURCE_NAME,87,16,170,12,ES_AUTOHSCROLL
+    LTEXT           "The ODBC name used when opening the database.",
+                    IDC_STATIC,87,32,173,11
+    LTEXT           "&Description:",IDC_STATIC,11,50,71,8
+    EDITTEXT        IDC_VDB_DESCRIPTION,87,48,170,12,ES_AUTOHSCROLL
+    LTEXT           "Additional descriptive text to help you distinguish one database from another.",
+                    IDC_STATIC,87,64,170,20
+    LTEXT           "Database &name:",IDC_STATIC,11,90,71,8
+    EDITTEXT        IDC_VDB_DATABASE_NAME,87,88,170,12,ES_AUTOHSCROLL
+    LTEXT           "The Desktop Engine name.",IDC_STATIC,87,104,170,13
+    GROUPBOX        "Files ",IDC_STATIC,5,131,289,62
+    LTEXT           "Where should the database files be placed?",IDC_STATIC,
+                    17,156,154,8
+    EDITTEXT        IDC_VDB_DATA_DIRECTORY,17,168,159,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VDB_DIRECTORY,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    178,167,14,14
+    CTEXT           "Initial\nsize of data file (Mb)",IDC_STATIC,199,138,41,
+                    26
+    EDITTEXT        IDC_VDB_DATA_SIZE,205,168,33,12,ES_AUTOHSCROLL
+    CTEXT           "Initial\nsize of log file (Mb)",IDC_STATIC,251,138,41,
+                    26
+    EDITTEXT        IDC_VDB_LOG_SIZE,255,168,33,12,ES_AUTOHSCROLL
+    GROUPBOX        "Authorization ",IDC_STATIC,5,200,193,60
+    LTEXT           "Authorization &ID:",IDC_STATIC,18,218,80,8
+    EDITTEXT        IDC_VDB_AUTHORIZATION_ID,105,215,82,12,ES_AUTOHSCROLL
+    LTEXT           "Authorization &Password:",IDC_STATIC,18,235,80,8
+    EDITTEXT        IDC_VDB_AUTHORIZATION_PASSWORD,105,232,82,12,
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,230,216,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,230,233,50,14
+END
+
+IDD_STATUS_WINDOW DIALOG DISCARDABLE  0, 0, 285, 65
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Status Window"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "",IDC_VDB_TEXT,7,24,269,36
+    PUSHBUTTON      "&Close",IDC_VDB_CLOSE,224,4,55,15
+END
+
+IDD_REPORT_BUILDER10 DIALOG DISCARDABLE  0, 0, 400, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Builder - save definition"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "What name do you want to use to identify this report?",
+                    -1,14,25,168,8
+    EDITTEXT        IDC_VDB_TITLE,14,38,377,14,ES_AUTOHSCROLL
+    LTEXT           "What filename should be used to save this report definition?",
+                    -1,14,71,188,8
+    EDITTEXT        IDC_VDB_FILENAME,14,84,184,14,ES_AUTOHSCROLL
+    LTEXT           "That's it!  You've finished defining this report.",-1,
+                    16,156,141,8
+    LTEXT           "To print this report use the &Print command under the File menu.",
+                    -1,16,173,198,8
+    LTEXT           "This same definition may be used to &Export data to tab-delimited files for use in other programs such as Excel or Word.",
+                    -1,16,190,210,18
+    PUSHBUTTON      "&Preview",IDC_VDB_PREVIEW,330,192,50,14
+END
+
+IDD_DATABASE_BACKUP DIALOG DISCARDABLE  0, 0, 302, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Backup Database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "A backup file can be used to . . .",IDC_STATIC,9,9,126,
+                    8
+    LTEXT           ". . . restore this database if it is lost or damaged;",
+                    IDC_STATIC,113,17,150,8
+    LTEXT           ". . . move this database to a different drive or directory;",
+                    IDC_STATIC,113,30,172,8
+    LTEXT           ". . . copy this database to a different computer.",
+                    IDC_STATIC,111,43,147,8
+    LTEXT           "To make a safe backup of your database, specify the drive letter, directory name, and filename where it should be saved:",
+                    IDC_STATIC,9,67,268,19
+    EDITTEXT        IDC_VDB_FILENAME,9,91,268,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VDB_DIRECTORY,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    280,91,14,14
+    LTEXT           "NOTE:  You will need to use a disk with approximately N Mb of available space.",
+                    IDC_VDB_DESCRIPTION,9,118,280,8
+    DEFPUSHBUTTON   "&Backup",IDOK,99,150,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,151,150,50,14
+END
+
+IDD_DATABASE_RESTORE DIALOG DISCARDABLE  0, 0, 360, 271
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Restore database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,4,0,289,117
+    CONTROL         "&Restore from a recent backup",IDC_VDB_CHOOSE_RECENT,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,10,8,110,10
+    CONTROL         "Use an &alternate backup",IDC_VDB_CHOOSE_ALTERNATE,
+                    "Button",BS_AUTORADIOBUTTON,10,87,94,10
+    CONTROL         "List2",IDC_VDB_RECENT_BACKUPS,"SysListView32",
+                    LVS_REPORT | LVS_SINGLESEL | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_GROUP | WS_TABSTOP,23,21,240,59
+    EDITTEXT        IDC_VDB_BACKUP_FILE,23,99,240,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VDB_SELECT_BACKUP_FILE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,265,98,14,14
+    GROUPBOX        " Where should the restored database &files be placed?  ",
+                    IDC_STATIC,4,119,289,148
+    EDITTEXT        IDC_VDB_DATA_DIRECTORY,22,133,240,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VDB_SELECT_DIRECTORY,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,264,132,14,14
+    LTEXT           "Data &source name:",IDC_STATIC,22,153,66,8
+    EDITTEXT        IDC_VDB_DATASOURCE_NAME,92,151,170,12,ES_AUTOHSCROLL
+    LTEXT           "The ODBC name used when opening the database.",
+                    IDC_STATIC,92,165,173,11
+    LTEXT           "&Description:",IDC_STATIC,22,179,66,8
+    EDITTEXT        IDC_VDB_DESCRIPTION,92,177,170,12,ES_AUTOHSCROLL
+    LTEXT           "Additional descriptive text.",IDC_STATIC,92,191,173,11
+    LTEXT           "Database &name:",IDC_STATIC,22,208,66,8
+    EDITTEXT        IDC_VDB_DATABASE_NAME,92,205,170,12,ES_AUTOHSCROLL
+    LTEXT           "The Desktop Engine name.",IDC_STATIC,92,219,170,11
+    LTEXT           "Authorization &ID:",IDC_STATIC,22,236,80,8
+    EDITTEXT        IDC_VDB_AUTHORIZATION_ID,109,233,82,12,ES_AUTOHSCROLL
+    LTEXT           "Authorization &Password:",IDC_STATIC,22,253,80,8
+    EDITTEXT        IDC_VDB_AUTHORIZATION_PASSWORD,109,250,82,12,
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Restore",IDOK,299,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,299,22,50,14
+END
+
+IDD_DATABASE_OPEN DIALOG DISCARDABLE  0, 0, 347, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List2",IDC_VDB_LIST_SOURCES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | WS_GROUP | 
+                    WS_TABSTOP,6,6,257,111
+    CONTROL         "Create new...",IDC_VDB_NEW_DATABASE,"Commander",
+                    WS_TABSTOP | 0x12,270,36,70,16
+    CONTROL         "Open",IDOK,"Commander",WS_TABSTOP | 0x12,270,57,70,16
+    CONTROL         "Cancel",IDCANCEL,"Commander",WS_TABSTOP | 0x12,270,79,
+                    70,16
+END
+
+IDD_DATABASE_ATTACH DIALOG DISCARDABLE  0, 0, 359, 266
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Attach database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,4,0,289,98
+    LTEXT           "Which detached MDF and LDF database files do you want to re-attach?",
+                    IDC_STATIC,17,9,228,8
+    LTEXT           "Data file (MDF) location:",IDC_STATIC,17,29,77,8
+    EDITTEXT        IDC_VDB_DATA_FILE,17,41,240,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VDB_SELECT_DATA_FILE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,259,40,14,14
+    LTEXT           "Log file (LDF) location:",IDC_STATIC,17,65,72,8
+    EDITTEXT        IDC_VDB_LOG_FILE,17,77,240,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_VDB_SELECT_LOG_FILE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,259,75,14,14
+    GROUPBOX        "",IDC_STATIC,4,103,289,159
+    LTEXT           "Data &source name:",IDC_STATIC,22,116,66,8
+    EDITTEXT        IDC_VDB_DATASOURCE_NAME,92,114,170,12,ES_AUTOHSCROLL
+    LTEXT           "The ODBC name used when opening the database.",
+                    IDC_STATIC,92,129,173,11
+    LTEXT           "&Description:",IDC_STATIC,22,148,66,8
+    EDITTEXT        IDC_VDB_DESCRIPTION,92,146,170,12,ES_AUTOHSCROLL
+    LTEXT           "Additional descriptive text to help you distinguish one database from another.",
+                    IDC_STATIC,92,161,170,20
+    LTEXT           "Database &name:",IDC_STATIC,22,188,66,8
+    EDITTEXT        IDC_VDB_DATABASE_NAME,92,185,170,12,ES_AUTOHSCROLL
+    LTEXT           "The Desktop Engine name.",IDC_STATIC,92,200,170,11
+    LTEXT           "Authorization &ID:",IDC_STATIC,22,222,80,8
+    EDITTEXT        IDC_VDB_AUTHORIZATION_ID,109,219,82,12,ES_AUTOHSCROLL
+    LTEXT           "Authorization &Password:",IDC_STATIC,22,243,80,8
+    EDITTEXT        IDC_VDB_AUTHORIZATION_PASSWORD,109,240,82,12,
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Attach",IDOK,299,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,299,22,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_VDB_DIRECTORY_ICONS BITMAP  DISCARDABLE     "directory_icons.bmp"
+IDB_VDB_FILE_ICONS      BITMAP  DISCARDABLE     "file_icons.bmp"
+IDB_VDB_DIRECTORY_DISABLED BITMAP  DISCARDABLE     "directory_disabled.bmp"
+IDB_VDB_DIRECTORY_DOWN  BITMAP  DISCARDABLE     "directory_down.bmp"
+IDB_VDB_DIRECTORY_FOCUS BITMAP  DISCARDABLE     "directory_focus.bmp"
+IDB_VDB_DIRECTORY_UP    BITMAP  DISCARDABLE     "directory_up.bmp"
+IDB_VDB_REPORT_FILTER   BITMAP  DISCARDABLE     "report_filter.bmp"
+IDB_VDB_REPORT_SORT     BITMAP  DISCARDABLE     "report_sort.bmp"
+IDB_VDB_REPORT_TABLES   BITMAP  DISCARDABLE     "report_tables.bmp"
+IDB_VDB_CHECKMARK_BITMAP BITMAP  DISCARDABLE     "checkmark.bmp"
+IDB_VDB_CONNECTION_FAILED BITMAP  DISCARDABLE     "connection_failed.bmp"
+IDB_VDB_SQL_SERVER      BITMAP  DISCARDABLE     "sql_server.bmp"
+IDB_VDB_ODBC_MANAGER    BITMAP  DISCARDABLE     "odbc_manager.bmp"
+IDB_VDB_ACCEPT          BITMAP  DISCARDABLE     "accept.bmp"
+IDB_VDB_REJECT          BITMAP  DISCARDABLE     "reject.bmp"
+IDB_VDB_DATABASE        BITMAP  DISCARDABLE     "database.bmp"
+IDB_VDB_NEW             BITMAP  DISCARDABLE     "new.bmp"
+IDB_VDB_CLOSE           BITMAP  DISCARDABLE     "close.bmp"
+IDB_VDB_OK              BITMAP  DISCARDABLE     "ok.bmp"
+IDB_VDB_NEW_DISABLED    BITMAP  DISCARDABLE     "vdb_new_disabled.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TROUBLESHOOT_LOGIN, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 257
+    END
+
+    IDD_DATABASE_DELETE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_STATUS_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_DATABASE_BACKUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_DATABASE_RESTORE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 353
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 264
+    END
+
+    IDD_DATABASE_OPEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 340
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_DATABASE_ATTACH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "afxres.rc"  	// Standard components
+#include "..\..\CrescentBloom\Apps\Version\CBVersion.rc"  // Crescent Bloom Version
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

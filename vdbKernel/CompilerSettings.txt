@@ -1,0 +1,56 @@
+application compiler settings for using Vault libaries:
+2/27/96
+
+                                             Undefine all
+module		           general setting	        symbols     Preprocessor Definitions
+-------------      ------------------------- ------------   -------------------------------------
+Vault.lib          "Use MFC in a Shared DLL"     'x'        USE_PRE_HDR,USE_AFX,WIN32,_M_ALPHA,_MSC_VER=900,_DEBUG,_ALPHA_,_AFXDLL,_MBCS,_DLL,_MT
+VaultDLL.dll	   "Use MFC in a Shared DLL"     'x'        USE_WIN,_M_ALPHA,_MSC_VER=900,_DEBUG,_WINDLL,_AFXDLL,_MBCS
+DiceDB.lib         "Use MFC in a Shared DLL"     ' '        WIN32,_DEBUG,_WINDOWS,_AFXDLL,_MBCS
+Propellerhead.lib  "Use MFC in a Shared DLL"     ' '        _DEBUG,WIN32,_AFXDLL,_MBCS
+
+InitDB.exe         "Use MFC in a Shared DLL"     ' '        WIN32,_DEBUG,_WINDOWS,_AFXDLL,_MBCS
+Datahub.exe        "Use MFC in a Shared DLL"     ' '        WIN32,_DEBUG,_WINDOWS,_AFXDLL,_MBCS
+Plumb.exe          "Use MFC in a Shared DLL"     ' '        _DEBUG,WIN32,_WINDOWS,_AFXDLL,_MBCS
+
+
+
+Take two:
+                                             Undefine all
+module	    	   general setting	           symbols      Preprocessor Definitions
+-------------      ------------------------- ------------   -------------------------------------
+Vault.lib    	   "Not using MFC"              'x'         USE_PRE_HDR,USE_WIN,WIN32,_M_ALPHA,_MSC_VER=900,_DEBUG,_ALPHA_,_MBCS,_DLL,_MT  /* remove _DLL and _MT??? */
+                    							            USE_PRE_HDR,USE_WIN,WIN32,_M_ALPHA,_MSC_VER=900,_DEBUG,_ALPHA_,_MBCS
+    	    	   "Use MFC in a static library"
+							                                USE_PRE_HDR,USE_AFX,WIN32,_M_ALPHA,_MSC_VER=900,_DEBUG,_ALPHA_,_MBCS
+
+VaultDLL.dll	   "Not using MFC"               'x'        WIN32,USE_WIN,_M_ALPHA,_MSC_VER=900,_DEBUG,_MBCS
+							                                WIN32,USE_AFX,_M_ALPHA,_MSC_VER=900,_DEBUG,_MBCS
+							                                WIN32,USE_AFX,_M_ALPHA,_MSC_VER=900,_DEBUG,_MBCS,_WINDLL,_USRDLL
+        		   "Use MFC in a static library"            WIN32,USE_AFX,_M_ALPHA,_MSC_VER=900,_DEBUG,_WINDLL,_USRDLL,_MBCS
+							                                WIN32,USE_AFX,_M_ALPHA,_MSC_VER=900,_DEBUG,_WINDLL,_USRDLL,_MBCS,_ALPHA_
+			                 
+DiceDB.lib         "Not using MFC"               ' '        WIN32,_DEBUG,_WINDOWS,_MBCS
+        		   "Use MFC in a static library"	
+
+Propellerhead.lib  "Not using MFC"               ' '        _DEBUG,WIN32,_MBCS
+        		   "Use MFC in a static library"	
+
+InitDB.exe         "Use MFC in a static library" ' '        WIN32,_DEBUG,_WINDOWS,_MBCS
+
+
+
+Take three:
+                                             Undefine all
+module      		   general setting	        symbols     Preprocessor Definitions
+-------------      ------------------------- ------------   -------------------------------------
+VaultResources.dll "Not using MFC"               ' '        WIN32,_DEBUG,_WINDOWS
+
+VaultWin32.lib     "Use MFC in a static library" ' '        WIN32,_DEBUG,_WINDOWS,_MBCS,USE_AFX
+
+Vault.lib	       "Use MFC in a static library" 'x'        USE_PRE_HDR,USE_AFX,WIN32,_DEBUG,_MBCS
+
+
+
+MolView32.mak      "Use MFC in a static library" 'x'        WIN32,_DEBUG,_WINDOWS,_USRDLL,_MBCS
+															WIN32,_DEBUG,_WINDOWS,_MBCS

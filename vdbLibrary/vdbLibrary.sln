@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vdbLibrary", "vdbLibrary.vcproj", "{3E1C6CB8-404B-4FDB-95A7-ABC67213D4DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AfxDebug|Win32 = AfxDebug|Win32
+		AfxRelease|Win32 = AfxRelease|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E1C6CB8-404B-4FDB-95A7-ABC67213D4DC}.AfxDebug|Win32.ActiveCfg = AfxDebug|Win32
+		{3E1C6CB8-404B-4FDB-95A7-ABC67213D4DC}.AfxDebug|Win32.Build.0 = AfxDebug|Win32
+		{3E1C6CB8-404B-4FDB-95A7-ABC67213D4DC}.AfxRelease|Win32.ActiveCfg = AfxRelease|Win32
+		{3E1C6CB8-404B-4FDB-95A7-ABC67213D4DC}.AfxRelease|Win32.Build.0 = AfxRelease|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

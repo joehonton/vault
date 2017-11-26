@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[vdbdialogs.dsp]
+SCC_Aux_Path = "C:\SourceSafe"
+SCC_Project_Name = "$/Vault/vdbDialogs", FSKAAAAA
+
+[vdbdialogs.dsw]
+SCC_Aux_Path = "C:\SourceSafe"
+SCC_Project_Name = "$/Vault/vdbDialogs", FSKAAAAA

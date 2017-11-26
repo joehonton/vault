@@ -1,0 +1,26 @@
+Project notes for VaultDLL
+
+See also ProjectNotes.txt in Vault\Vdblib project
+
+use the compile time define USE_WIN to include the <windows.h> file
+
+Compile and link this DLL using the general setting "Use MFC in a Shared DLL".
+This also requires all applications to use this general setting as well, otherwise
+you will get about 20 "xxxx already defined in libcmt.lib" linker errors.
+
+
+If this gives you problems try adding this line to your InitInstance routine:
+
+	// turn off MFC new and delete debugging facility
+	AfxEnableMemoryTracking( FALSE );
+	
+Adding this line causes an unhandled exception at program completion as the DLL is
+being deleted:	
+
+	afxMemDF = 0;
+
+All of this still doesn't work though as the first free/delete attempts to delete using
+the AFX routines which assert.  The allocation routines always adds the diagnostic support.
+
+
+Let's try building the DLL without MFC support....
